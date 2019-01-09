@@ -4,7 +4,7 @@ Repository containing simple module to allow easy Telegram messages for code upd
 How to setup with pip:
 ```
 pip install tgalert
-nano ~/.tg-config  # type auth token for your Telegram bot (use @BotFather, can be shared), new line, followed by your client id (use @get_id bot)
+nano ~/.tg-config  # type auth token for your Telegram bot (use @BotFather to create new bot, can be shared), new line, followed by your client id (use @get_id bot)
 ```
 
 Then in your code:
