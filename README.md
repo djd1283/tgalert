@@ -9,8 +9,8 @@ nano ~/.tg-config  # add auth token for your Telegram bot (use @BotFather, can b
 
 Then in your code:
 
-```from tg_alert import TelegramAlert
-
+```
+from tg_alert import TelegramAlert
 alert = TelegramAlert()
 alert.write('Training complete')
 ```
