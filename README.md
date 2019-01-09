@@ -1,9 +1,9 @@
 # tgalert
-Repository containing a simple module to allow Telegram messages for code updates. Original intention is to notify a programmer when a long process is finished, such as training a model or building a dataset.
+Repository containing a simple Python3 module to allow Telegram messages for code updates. Original intention is to notify a programmer when a long process is finished, such as training a model or building a dataset.
 
 How to setup with pip:
 ```
-pip install tgalert
+pip3 install tgalert
 nano ~/.tg-config  # type auth token for your Telegram bot (use @BotFather to create new bot, can be shared), new line, followed by your client id (use @get_id bot)
 ```
 
