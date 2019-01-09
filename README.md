@@ -1,5 +1,5 @@
 # tgalert
-Repository containing simple module to allow easy Telegram messages for code updates. Original intention is to notify programmer when long process finishing, such as training a model or building a dataset.
+Repository containing a simple module to allow easy Telegram messages for code updates. Original intention is to notify programmer when long process finishing, such as training a model or building a dataset.
 
 How to setup with pip:
 ```
