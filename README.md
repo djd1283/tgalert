@@ -1,2 +1,27 @@
 # tgalert
-Repository containing simple module to allow easy Telegram messages for code updates.
+Repository containing a simple Python3 module to allow Telegram messages for code updates. Original intention is to notify a programmer when a long process is finished, such as training a model or building a dataset.
+
+How to setup with pip:
+```
+pip3 install tgalert
+nano ~/.tg-config  # type auth token for your Telegram bot (use @BotFather to create new bot, can be shared), new line, followed by your client id (use @get_id bot)
+```
+
+To test the installation (should send two Telegram messages, one alert and one error):
+
+```
+python3 -c "from tgalert import tg_alert; tg_alert.test()"
+```
+
+Then in your code:
+
+```
+from tgalert import TelegramAlert
+alert = TelegramAlert()
+alert.write('Training complete')
+```
+
+Extra features:
+
+- if .tg-config does not exist, write() performs no action. so it can be used in code without checks
+- if program crashes on exception it will notify on Telegram (except KeyboardInterupt and SyntaxError)
