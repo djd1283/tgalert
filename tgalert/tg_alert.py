@@ -36,9 +36,13 @@ class TelegramAlert:
             self.write(__file__ + ': ' + repr(value))
         self.prev_hook(type, value, traceback)
 
-if __name__ == '__main__':
+def test():
     # Test code
+    print('Sending alert and raising RuntimeError')
     alert = TelegramAlert()
     alert.write('Telegram alert!')
 
     raise RuntimeError
+
+if __name__ == '__main__':
+    test()
