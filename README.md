@@ -7,10 +7,16 @@ pip3 install tgalert
 nano ~/.tg-config  # type auth token for your Telegram bot (use @BotFather to create new bot, can be shared), new line, followed by your client id (use @get_id bot)
 ```
 
+To test the installation (should send two Telegram messages, one alert and one error):
+
+```
+python3 -c "from tgalert import tg_alert; tg_alert.test()"
+```
+
 Then in your code:
 
 ```
-from tg_alert import TelegramAlert
+from tgalert import TelegramAlert
 alert = TelegramAlert()
 alert.write('Training complete')
 ```
