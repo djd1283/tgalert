@@ -1,5 +1,5 @@
 # tgalert
-Repository containing a simple Python3 module to allow Telegram messages for code updates. Original intention is to notify a programmer when a long process is finished, such as training a model or building a dataset.
+Repository containing a simple Python3 module to allow messages for code updates using the Telegram messaging service. Original intention is to notify a programmer when a long process is finished, such as training a model or building a dataset.
 
 How to setup with pip:
 ```
@@ -23,5 +23,6 @@ alert.write('Training complete')
 
 Extra features:
 
-- If .tg-config does not exist, write() performs no action and throws no error. It can be used in code without worry.
+- If .tg-config does not exist, write() performs no action and throws no error; it can be used in code without worry
+- Can specify different config location if necessary
 - If program crashes on exception it will notify on Telegram (all but KeyboardInterupt and SyntaxError)
