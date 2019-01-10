@@ -24,4 +24,4 @@ alert.write('Training complete')
 Extra features:
 
 - If .tg-config does not exist, write() performs no action and throws no error. It can be used in code without worry.
-- If program crashes on exception it will notify on Telegram (except KeyboardInterupt and SyntaxError)
+- If program crashes on exception it will notify on Telegram (all but KeyboardInterupt and SyntaxError)
