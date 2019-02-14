@@ -7,6 +7,13 @@ pip3 install tgalert
 nano ~/.tg-config  # type auth token for your Telegram bot (use @BotFather to create new bot, can be shared), new line, followed by your client id (use @get_id bot)
 ```
 
+Fill .tg-config like this
+```
+auth: <bot auth token here>
+id: <user id here>
+```
+where auth token is given when you create your bot with @BotFather, and client id can be found with @get_id bot.
+
 To test the installation (should send two Telegram messages, one alert and one error):
 
 ```
