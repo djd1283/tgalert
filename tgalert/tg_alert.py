@@ -5,7 +5,7 @@ import sys
 from telegram import Bot
 
 class TelegramAlert:
-    def __init__(self, config=None):
+    def __init__(self, config=None, disable=False):
         """Using auth token and chat id found in the config file,
         send a message to user.
 
@@ -16,6 +16,7 @@ class TelegramAlert:
 
         self.bot_token = None
         self.chat_id = None
+        self.disable = disable
 
         # send message upon exception
         self.prev_hook = sys.excepthook
@@ -23,11 +24,13 @@ class TelegramAlert:
 
         if os.path.exists(config):
             with open(config, 'r') as f:
-                self.bot_token = next(f).strip()
-                self.chat_id = next(f).strip()
+                contents = f.read()
+                contents = contents.replace('auth:', '').replace('id:', '').split()
+
+                self.bot_token, self.chat_id = contents
 
     def write(self, text):
-        if self.bot_token is not None and self.chat_id is not None:
+        if self.bot_token is not None and self.chat_id is not None and not self.disable:
             bot = Bot(token=self.bot_token)
             bot.send_message(chat_id=self.chat_id, text=text)
 
