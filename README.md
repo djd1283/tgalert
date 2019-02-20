@@ -33,3 +33,4 @@ Extra features:
 - If .tg-config does not exist, write() performs no action and throws no error; it can be used in code without worry
 - Can specify different config location if necessary
 - If program crashes on exception it will notify on Telegram (all but KeyboardInterupt and SyntaxError)
+- Alerts can be shut off (when debugging, etc) using disable=True parameter
